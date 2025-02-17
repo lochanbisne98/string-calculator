@@ -15,7 +15,7 @@ describe('StringCalculator', () => {
 
         test('should return the number for a single number', () => {
             expect(calculator.add("1")).toBe(1);
-            expect(calculator.add("5")).toBe(5);
+            expect(calculator.add("6")).toBe(6);
         });
     });
 });
