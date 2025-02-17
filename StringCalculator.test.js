@@ -22,5 +22,6 @@ describe('StringCalculator', () => {
             expect(calculator.add("1,5")).toBe(6);
             expect(calculator.add("2,3")).toBe(5);
         });
+        
     });
 });
