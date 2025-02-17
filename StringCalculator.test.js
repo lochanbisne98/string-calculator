@@ -17,5 +17,10 @@ describe('StringCalculator', () => {
             expect(calculator.add("1")).toBe(1);
             expect(calculator.add("6")).toBe(6);
         });
+
+        test('should return the sum of two numbers', () => {
+            expect(calculator.add("1,5")).toBe(6);
+            expect(calculator.add("2,3")).toBe(5);
+        });
     });
 });
