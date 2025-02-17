@@ -5,7 +5,9 @@ class StringCalculator {
             return 0;
         }
 
-        return parseInt(numbers);
+        return numbers.split(',')
+            .map(num => parseInt(num))
+            .reduce((sum, num) => sum + num, 0);
     }
 }
 
