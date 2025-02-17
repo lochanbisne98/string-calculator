@@ -13,9 +13,14 @@ class StringCalculator {
             numbersToProcess = numbers.substring(delimiterEnd + 1);
         }
 
-        return numbersToProcess.split(delimiter)
-            .map(num => parseInt(num))
-            .reduce((sum, num) => sum + num, 0);
+        const numbers = numbersToProcess.split(delimiter).map(num => parseInt(num));
+        
+        const negativeNumbers = numbers.filter(num => num < 0);
+        if (negativeNumbers.length > 0) {
+            throw new Error(`negative numbers not allowed: ${negativeNumbers.join(',')}`);
+        }
+        
+        return numbers.reduce((sum, num) => sum + num, 0);
     }
 }
 
