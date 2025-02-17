@@ -27,5 +27,10 @@ describe('StringCalculator', () => {
             expect(calculator.add("1,2,3,4,5")).toBe(15);
             expect(calculator.add("10,20,30")).toBe(60);
         });
+
+        test('should handle newlines between numbers', () => {
+            expect(calculator.add("1\n2,3")).toBe(6);
+            expect(calculator.add("1,2\n3")).toBe(6);
+        });
     });
 });
